@@ -10,4 +10,4 @@ An Arxiv-Agent based on Crawler, RAG, Local Llama-3-8b and telegram api, serving
 ## Materials
 - Class project of SUSTech/STA303
 - Slides ans reports are in the `meterial` folder
-- Check the last few pages of `.pptx` for gif demonstration.
+- Check the gif for demonstration.
