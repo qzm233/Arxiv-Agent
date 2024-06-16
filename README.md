@@ -11,3 +11,10 @@ An Arxiv-Agent based on Crawler, RAG, Local Llama-3-8b and telegram api, serving
 - Class project of SUSTech/STA303
 - Slides ans reports are in the `meterial` folder
 - Check the gif for demonstration.
+
+## Contributor
+- [Zimo Qi](https://github.com/qzm233)
+- [Yixuan Ding](https://github.com/DingYX0731)
+- [Youxin Zhu](https://github.com/SuperGGB0)
+- [Gengshang Dong](https://github.com/ShaunDong)
+- [Kongchang Zhou](https://github.com/QingFengXiao214)
