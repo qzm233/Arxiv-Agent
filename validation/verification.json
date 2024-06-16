@@ -1,0 +1,878 @@
+[
+    {
+        "title": "Identity Inference from CLIP Models using Only Textual Data",
+        "link": "http://arxiv.org/abs/2405.14517v1",
+        "abstract": "The widespread usage of large-scale multimodal models like CLIP has\nheightened concerns about the leakage of personally identifiable information\n(PII). Existing methods for identity inference in CLIP models, i.e., to detect\nthe presence of a person's PII used for training a CLIP model, require querying\nthe model with full PII, including textual descriptions of the person and\ncorresponding images (e.g., the name and the face photo of the person).\nHowever, this may lead to potential privacy breach of the image, as it may have\nnot been seen by the target model yet. Additionally, traditional membership\ninference attacks (MIAs) train shadow models to mimic the behaviors of the\ntarget model, which incurs high computational costs, especially for large CLIP\nmodels. To address these challenges, we propose a textual unimodal detector\n(TUNI) in CLIP models, a novel method for ID inference that 1) queries the\ntarget model with only text data; and 2) does not require training shadow\nmodels. Firstly, we develop a feature extraction algorithm, guided by the CLIP\nmodel, to extract features from a text description. TUNI starts with randomly\ngenerating textual gibberish that were clearly not utilized for training, and\nleverages their feature vectors to train a system of anomaly detectors. During\ninference, the feature vector of each test text is fed into the anomaly\ndetectors to determine if the person's PII is in the training set (abnormal) or\nnot (normal). Moreover, TUNI can be further strengthened integrating real\nimages associated with the tested individuals, if available at the detector.\nExtensive experiments of TUNI across various CLIP model architectures and\ndatasets demonstrate its superior performance over baselines, albeit with only\ntext data.",
+        "subjects": [
+            "cs.LG",
+            "cs.CR"
+        ],
+        "authors": [
+            "Songze Li",
+            "Ruoxi Cheng",
+            "Xiaojun Jia"
+        ],
+        "published": "2024-05-23T12:54:25Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "Tuning-free Universally-Supervised Semantic Segmentation",
+        "link": "http://arxiv.org/abs/2405.14294v1",
+        "abstract": "This work presents a tuning-free semantic segmentation framework based on\nclassifying SAM masks by CLIP, which is universally applicable to various types\nof supervision. Initially, we utilize CLIP's zero-shot classification ability\nto generate pseudo-labels or perform open-vocabulary segmentation. However, the\nmisalignment between mask and CLIP text embeddings leads to suboptimal results.\nTo address this issue, we propose discrimination-bias aligned CLIP to closely\nalign mask and text embedding, offering an overhead-free performance gain. We\nthen construct a global-local consistent classifier to classify SAM masks,\nwhich reveals the intrinsic structure of high-quality embeddings produced by\nDBA-CLIP and demonstrates robustness against noisy pseudo-labels. Extensive\nexperiments validate the efficiency and effectiveness of our method, and we\nachieve state-of-the-art (SOTA) or competitive performance across various\ndatasets and supervision types.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaobo Yang",
+            "Xiaojin Gong"
+        ],
+        "published": "2024-05-23T08:13:52Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "RET-CLIP: A Retinal Image Foundation Model Pre-trained with Clinical\n  Diagnostic Reports",
+        "link": "http://arxiv.org/abs/2405.14137v1",
+        "abstract": "The Vision-Language Foundation model is increasingly investigated in the\nfields of computer vision and natural language processing, yet its exploration\nin ophthalmology and broader medical applications remains limited. The\nchallenge is the lack of labeled data for the training of foundation model. To\nhandle this issue, a CLIP-style retinal image foundation model is developed in\nthis paper. Our foundation model, RET-CLIP, is specifically trained on a\ndataset of 193,865 patients to extract general features of color fundus\nphotographs (CFPs), employing a tripartite optimization strategy to focus on\nleft eye, right eye, and patient level to reflect real-world clinical\nscenarios. Extensive experiments demonstrate that RET-CLIP outperforms existing\nbenchmarks across eight diverse datasets spanning four critical diagnostic\ncategories: diabetic retinopathy, glaucoma, multiple disease diagnosis, and\nmulti-label classification of multiple diseases, which demonstrate the\nperformance and generality of our foundation model. The sourse code and\npre-trained model are available at https://github.com/sStonemason/RET-CLIP.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiawei Du",
+            "Jia Guo",
+            "Weihang Zhang",
+            "Shengzhu Yang",
+            "Hanruo Liu",
+            "Huiqi Li",
+            "Ningli Wang"
+        ],
+        "published": "2024-05-23T03:20:51Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "A Lost Opportunity for Vision-Language Models: A Comparative Study of\n  Online Test-time Adaptation for Vision-Language Models",
+        "link": "http://arxiv.org/abs/2405.14977v1",
+        "abstract": "In the realm of deep learning, maintaining model robustness against\ndistribution shifts is critical. This paper investigates test-time adaptation\nstrategies for vision-language models, with a specific focus on CLIP and its\nvariants. Through a systematic exploration of prompt-based techniques and\nexisting test-time adaptation methods, the study aims to enhance the\nadaptability and robustness of vision-language models in diverse real-world\nscenarios. The investigation includes an analysis of prompt engineering\nstrategies, such as hand-crafted prompts, prompt ensembles, and prompt learning\ntechniques. We introduce a vision-text-space ensemble that significantly boosts\nthe average performance compared to a text-space-only ensemble. Additionally,\nour comparative study delves into leveraging existing test-time adaptation\nmethods originally designed for image classification tasks. Experimental\nevaluations conducted across various datasets and model architectures\ndemonstrate the efficacy of different adaptation strategies. We further give\ninsights into the importance of updating the vision encoder and whether it is\nbeneficial to update the text encoder. Code is available at\nhttps://github.com/mariodoebler/test-time-adaptation",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mario Döbler",
+            "Robert A. Marsden",
+            "Tobias Raichle",
+            "Bin Yang"
+        ],
+        "published": "2024-05-23T18:27:07Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "Designing A Sustainable Marine Debris Clean-up Framework without Human\n  Labels",
+        "link": "http://arxiv.org/abs/2405.14815v1",
+        "abstract": "Marine debris poses a significant ecological threat to birds, fish, and other\nanimal life. Traditional methods for assessing debris accumulation involve\nlabor-intensive and costly manual surveys. This study introduces a framework\nthat utilizes aerial imagery captured by drones to conduct remote trash\nsurveys. Leveraging computer vision techniques, our approach detects,\nclassifies, and maps marine debris distributions. The framework uses Grounding\nDINO, a transformer-based zero-shot object detector, and CLIP, a\nvision-language model for zero-shot object classification, enabling the\ndetection and classification of debris objects based on material type without\nthe need for training labels. To mitigate over-counting due to different views\nof the same object, Scale-Invariant Feature Transform (SIFT) is employed for\nduplicate matching using local object features. Additionally, we have developed\na user-friendly web application that facilitates end-to-end analysis of drone\nimages, including object detection, classification, and visualization on a map\nto support cleanup efforts. Our method achieves competitive performance in\ndetection (0.69 mean IoU) and classification (0.74 F1 score) across seven\ndebris object classes without labeled data, comparable to state-of-the-art\nsupervised methods. This framework has the potential to streamline automated\ntrash sampling surveys, fostering efficient and sustainable community-led\ncleanup initiatives.",
+        "subjects": [
+            "cs.CV",
+            "I.4; H.4; J.6"
+        ],
+        "authors": [
+            "Raymond Wang",
+            "Nicholas R. Record",
+            "D. Whitney King",
+            "Tahiya Chowdhury"
+        ],
+        "published": "2024-05-23T17:28:23Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "CLIPScope: Enhancing Zero-Shot OOD Detection with Bayesian Scoring",
+        "link": "http://arxiv.org/abs/2405.14737v1",
+        "abstract": "Detection of out-of-distribution (OOD) samples is crucial for safe real-world\ndeployment of machine learning models. Recent advances in vision language\nfoundation models have made them capable of detecting OOD samples without\nrequiring in-distribution (ID) images. However, these zero-shot methods often\nunderperform as they do not adequately consider ID class likelihoods in their\ndetection confidence scoring. Hence, we introduce CLIPScope, a zero-shot OOD\ndetection approach that normalizes the confidence score of a sample by class\nlikelihoods, akin to a Bayesian posterior update. Furthermore, CLIPScope\nincorporates a novel strategy to mine OOD classes from a large lexical\ndatabase. It selects class labels that are farthest and nearest to ID classes\nin terms of CLIP embedding distance to maximize coverage of OOD samples. We\nconduct extensive ablation studies and empirical evaluations, demonstrating\nstate of the art performance of CLIPScope across various OOD detection\nbenchmarks.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Fu",
+            "Naman Patel",
+            "Prashanth Krishnamurthy",
+            "Farshad Khorrami"
+        ],
+        "published": "2024-05-23T16:03:55Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "An Empirical Study and Analysis of Text-to-Image Generation Using Large\n  Language Model-Powered Textual Representation",
+        "link": "http://arxiv.org/abs/2405.12914v1",
+        "abstract": "One critical prerequisite for faithful text-to-image generation is the\naccurate understanding of text inputs. Existing methods leverage the text\nencoder of the CLIP model to represent input prompts. However, the pre-trained\nCLIP model can merely encode English with a maximum token length of 77.\nMoreover, the model capacity of the text encoder from CLIP is relatively\nlimited compared to Large Language Models (LLMs), which offer multilingual\ninput, accommodate longer context, and achieve superior text representation. In\nthis paper, we investigate LLMs as the text encoder to improve the language\nunderstanding in text-to-image generation. Unfortunately, training\ntext-to-image generative model with LLMs from scratch demands significant\ncomputational resources and data. To this end, we introduce a three-stage\ntraining pipeline that effectively and efficiently integrates the existing\ntext-to-image model with LLMs. Specifically, we propose a lightweight adapter\nthat enables fast training of the text-to-image model using the textual\nrepresentations from LLMs. Extensive experiments demonstrate that our model\nsupports not only multilingual but also longer input context with superior\nimage generation quality.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiyu Tan",
+            "Mengping Yang",
+            "Luozheng Qin",
+            "Hao Yang",
+            "Ye Qian",
+            "Qiang Zhou",
+            "Cheng Zhang",
+            "Hao Li"
+        ],
+        "published": "2024-05-21T16:35:02Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "WorldAfford: Affordance Grounding based on Natural Language Instructions",
+        "link": "http://arxiv.org/abs/2405.12461v1",
+        "abstract": "Affordance grounding aims to localize the interaction regions for the\nmanipulated objects in the scene image according to given instructions. A\ncritical challenge in affordance grounding is that the embodied agent should\nunderstand human instructions and analyze which tools in the environment can be\nused, as well as how to use these tools to accomplish the instructions. Most\nrecent works primarily supports simple action labels as input instructions for\nlocalizing affordance regions, failing to capture complex human objectives.\nMoreover, these approaches typically identify affordance regions of only a\nsingle object in object-centric images, ignoring the object context and\nstruggling to localize affordance regions of multiple objects in complex scenes\nfor practical applications. To address this concern, for the first time, we\nintroduce a new task of affordance grounding based on natural language\ninstructions, extending it from previously using simple labels for complex\nhuman instructions. For this new task, we propose a new framework, WorldAfford.\nWe design a novel Affordance Reasoning Chain-of-Thought Prompting to reason\nabout affordance knowledge from LLMs more precisely and logically.\nSubsequently, we use SAM and CLIP to localize the objects related to the\naffordance knowledge in the image. We identify the affordance regions of the\nobjects through an affordance region localization module. To benchmark this new\ntask and validate our framework, an affordance grounding dataset, LLMaFF, is\nconstructed. We conduct extensive experiments to verify that WorldAfford\nperforms state-of-the-art on both the previous AGD20K and the new LLMaFF\ndataset. In particular, WorldAfford can localize the affordance regions of\nmultiple objects and provide an alternative when objects in the environment\ncannot fully match the given instruction.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Changmao Chen",
+            "Yuren Cong",
+            "Zhen Kan"
+        ],
+        "published": "2024-05-21T02:37:45Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "Refining Skewed Perceptions in Vision-Language Models through Visual\n  Representations",
+        "link": "http://arxiv.org/abs/2405.14030v1",
+        "abstract": "Large vision-language models (VLMs), such as CLIP, have become foundational,\ndemonstrating remarkable success across a variety of downstream tasks. Despite\ntheir advantages, these models, akin to other foundational systems, inherit\nbiases from the disproportionate distribution of real-world data, leading to\nmisconceptions about the actual environment. Prevalent datasets like ImageNet\nare often riddled with non-causal, spurious correlations that can diminish VLM\nperformance in scenarios where these contextual elements are absent. This study\npresents an investigation into how a simple linear probe can effectively\ndistill task-specific core features from CLIP's embedding for downstream\napplications. Our analysis reveals that the CLIP text representations are often\ntainted by spurious correlations, inherited in the biased pre-training dataset.\nEmpirical evidence suggests that relying on visual representations from CLIP,\nas opposed to text embedding, is more practical to refine the skewed\nperceptions in VLMs, emphasizing the superior utility of visual representations\nin overcoming embedded biases. Our codes will be available here.",
+        "subjects": [
+            "cs.CV",
+            "cs.CL"
+        ],
+        "authors": [
+            "Haocheng Dai",
+            "Sarang Joshi"
+        ],
+        "published": "2024-05-22T22:03:11Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "TOPA: Extend Large Language Models for Video Understanding via Text-Only\n  Pre-Alignment",
+        "link": "http://arxiv.org/abs/2405.13911v1",
+        "abstract": "Recent advancements in image understanding have benefited from the extensive\nuse of web image-text pairs. However, video understanding remains a challenge\ndespite the availability of substantial web video-text data. This difficulty\nprimarily arises from the inherent complexity of videos and the inefficient\nlanguage supervision in recent web-collected video-text datasets. In this\npaper, we introduce Text-Only Pre-Alignment (TOPA), a novel approach to extend\nlarge language models (LLMs) for video understanding, without the need for\npre-training on real video data. Specifically, we first employ an advanced LLM\nto automatically generate Textual Videos comprising continuous textual frames,\nalong with corresponding annotations to simulate real video-text data. Then,\nthese annotated textual videos are used to pre-align a language-only LLM with\nthe video modality. To bridge the gap between textual and real videos, we\nemploy the CLIP model as the feature extractor to align image and text\nmodalities. During text-only pre-alignment, the continuous textual frames,\nencoded as a sequence of CLIP text features, are analogous to continuous CLIP\nimage features, thus aligning the LLM with real video representation. Extensive\nexperiments, including zero-shot evaluation and finetuning on various video\nunderstanding tasks, demonstrate that TOPA is an effective and efficient\nframework for aligning video content with LLMs. In particular, without training\non any video data, the TOPA-Llama2-13B model achieves a Top-1 accuracy of 51.0%\non the challenging long-form video understanding benchmark, Egoschema. This\nperformance surpasses previous video-text pre-training approaches and proves\ncompetitive with recent GPT-3.5-based video agents.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Wei Li",
+            "Hehe Fan",
+            "Yongkang Wong",
+            "Mohan Kankanhalli",
+            "Yi Yang"
+        ],
+        "published": "2024-05-22T18:35:10Z",
+        "label": "CLIP"
+    },
+    {
+        "title": "Next-slot OFDM-CSI Prediction: Multi-head Self-attention or State Space\n  Model?",
+        "link": "http://arxiv.org/abs/2405.11072v1",
+        "abstract": "The ongoing fifth-generation (5G) standardization is exploring the use of\ndeep learning (DL) methods to enhance the new radio (NR) interface. Both in\nacademia and industry, researchers are investigating the performance and\ncomplexity of multiple DL architecture candidates for specific one-sided and\ntwo-sided use cases such as channel state estimation (CSI) feedback, CSI\nprediction, beam management, and positioning. In this paper, we set focus on\nthe CSI prediction task and study the performance and generalization of the two\nmain DL layers that are being extensively benchmarked within the DL community,\nnamely, multi-head self-attention (MSA) and state-space model (SSM). We train\nand evaluate MSA and SSM layers to predict the next slot for uplink and\ndownlink communication scenarios over urban microcell (UMi) and urban macrocell\n(UMa) OFDM 5G channel models. Our numerical results demonstrate that SSMs\nexhibit better prediction and generalization capabilities than MSAs only for\nSISO cases. For MIMO scenarios, however, the MSA layer outperforms the SSM one.\nWhile both layers represent potential DL architectures for future DL-enabled 5G\nuse cases, the overall investigation of this paper favors MSAs over SSMs.",
+        "subjects": [
+            "cs.IT",
+            "eess.SP",
+            "math.IT"
+        ],
+        "authors": [
+            "Mohamed Akrout",
+            "Faouzi Bellili",
+            "Amine Mezghani",
+            "Robert W. Heath"
+        ],
+        "published": "2024-05-17T20:03:10Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "ARDDQN: Attention Recurrent Double Deep Q-Network for UAV Coverage Path\n  Planning and Data Harvesting",
+        "link": "http://arxiv.org/abs/2405.11013v1",
+        "abstract": "Unmanned Aerial Vehicles (UAVs) have gained popularity in data harvesting\n(DH) and coverage path planning (CPP) to survey a given area efficiently and\ncollect data from aerial perspectives, while data harvesting aims to gather\ninformation from various Internet of Things (IoT) sensor devices, coverage path\nplanning guarantees that every location within the designated area is visited\nwith minimal redundancy and maximum efficiency. We propose the ARDDQN\n(Attention-based Recurrent Double Deep Q Network), which integrates double deep\nQ-networks (DDQN) with recurrent neural networks (RNNs) and an attention\nmechanism to generate path coverage choices that maximize data collection from\nIoT devices and to learn a control scheme for the UAV that generalizes energy\nrestrictions. We employ a structured environment map comprising a compressed\nglobal environment map and a local map showing the UAV agent's locate\nefficiently scaling to large environments. We have compared Long short-term\nmemory (LSTM), Bi-directional long short-term memory (Bi-LSTM), Gated recurrent\nunit (GRU) and Bidirectional gated recurrent unit (Bi-GRU) as recurrent neural\nnetworks (RNN) to the result without RNN We propose integrating the LSTM with\nthe Attention mechanism to the existing DDQN model, which works best on\nevolution parameters, i.e., data collection, landing, and coverage ratios for\nthe CPP and data harvesting scenarios.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Praveen Kumar",
+            " Priyadarshni",
+            "Rajiv Misra"
+        ],
+        "published": "2024-05-17T16:53:19Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "HARIS: Human-Like Attention for Reference Image Segmentation",
+        "link": "http://arxiv.org/abs/2405.10707v2",
+        "abstract": "Referring image segmentation (RIS) aims to locate the particular region\ncorresponding to the language expression. Existing methods incorporate features\nfrom different modalities in a \\emph{bottom-up} manner. This design may get\nsome unnecessary image-text pairs, which leads to an inaccurate segmentation\nmask. In this paper, we propose a referring image segmentation method called\nHARIS, which introduces the Human-Like Attention mechanism and uses the\nparameter-efficient fine-tuning (PEFT) framework. To be specific, the\nHuman-Like Attention gets a \\emph{feedback} signal from multi-modal features,\nwhich makes the network center on the specific objects and discard the\nirrelevant image-text pairs. Besides, we introduce the PEFT framework to\npreserve the zero-shot ability of pre-trained encoders. Extensive experiments\non three widely used RIS benchmarks and the PhraseCut dataset demonstrate that\nour method achieves state-of-the-art performance and great zero-shot ability.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mengxi Zhang",
+            "Heqing Lian",
+            "Yiming Liu",
+            "Jie Chen"
+        ],
+        "published": "2024-05-17T11:29:23Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "ECATS: Explainable-by-design concept-based anomaly detection for time\n  series",
+        "link": "http://arxiv.org/abs/2405.10608v1",
+        "abstract": "Deep learning methods for time series have already reached excellent\nperformances in both prediction and classification tasks, including anomaly\ndetection. However, the complexity inherent in Cyber Physical Systems (CPS)\ncreates a challenge when it comes to explainability methods. To overcome this\ninherent lack of interpretability, we propose ECATS, a concept-based\nneuro-symbolic architecture where concepts are represented as Signal Temporal\nLogic (STL) formulae. Leveraging kernel-based methods for STL, concept\nembeddings are learnt in an unsupervised manner through a cross-attention\nmechanism. The network makes class predictions through these concept\nembeddings, allowing for a meaningful explanation to be naturally extracted for\neach input. Our preliminary experiments with a simple CPS-based dataset show\nthat our model is able to achieve great classification performance while\nensuring local interpretability.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Irene Ferfoglia",
+            "Gaia Saveri",
+            "Laura Nenzi",
+            "Luca Bortolussi"
+        ],
+        "published": "2024-05-17T08:12:53Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "Defect Category Prediction Based on Multi-Source Domain Adaptation",
+        "link": "http://dx.doi.org/10.13328/j.cnki.jos.007109",
+        "abstract": "In recent years, defect prediction techniques based on deep learning have\nbecome a prominent research topic in the field of software engineering. These\ntechniques can identify potential defects without executing the code. However,\nexisting approaches mostly concentrate on determining the presence of defects\nat the method-level code, lacking the ability to precisely classify specific\ndefect categories. Consequently, this undermines the efficiency of developers\nin locating and rectifying defects. Furthermore, in practical software\ndevelopment, new projects often lack sufficient defect data to train\nhigh-accuracy deep learning models. Models trained on historical data from\nexisting projects frequently struggle to achieve satisfactory generalization\nperformance on new projects. Hence, this paper initially reformulates the\ntraditional binary defect prediction task into a multi-label classification\nproblem, employing defect categories described in the Common Weakness\nEnumeration (CWE) as fine-grained predictive labels. To enhance the model\nperformance in cross-project scenarios, this paper proposes a multi-source\ndomain adaptation framework that integrates adversarial training and attention\nmechanisms. Specifically, the proposed framework employs adversarial training\nto mitigate domain (i.e., software projects) discrepancies, and further\nutilizes domain-invariant features to capture feature correlations between each\nsource domain and the target domain. Simultaneously, the proposed framework\nemploys a weighted maximum mean discrepancy as an attention mechanism to\nminimize the representation distance between source and target domain features,\nfacilitating model in learning more domain-independent features. The\nexperiments on 8 real-world open-source projects show that the proposed\napproach achieves significant performance improvements compared to\nstate-of-the-art baselines.",
+        "subjects": [
+            "cs.SE"
+        ],
+        "authors": [
+            "Ying Xing",
+            "Mengci Zhao",
+            "Bin Yang",
+            "Yuwei Zhang",
+            "Wenjin Li",
+            "Jiawei Gu",
+            "Jun Yuan"
+        ],
+        "published": "2024-05-17T03:30:31Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "Lean Attention: Hardware-Aware Scalable Attention Mechanism for the\n  Decode-Phase of Transformers",
+        "link": "http://arxiv.org/abs/2405.10480v1",
+        "abstract": "Transformer-based models have emerged as one of the most widely used\narchitectures for natural language processing, natural language generation, and\nimage generation. The size of the state-of-the-art models has increased\nsteadily reaching billions of parameters. These huge models are memory hungry\nand incur significant inference latency even on cutting edge AI-accelerators,\nsuch as GPUs. Specifically, the time and memory complexity of the attention\noperation is quadratic in terms of the total context length, i.e., prompt and\noutput tokens. Thus, several optimizations such as key-value tensor caching and\nFlashAttention computation have been proposed to deliver the low latency\ndemands of applications relying on such large models. However, these techniques\ndo not cater to the computationally distinct nature of different phases during\ninference.\n  To that end, we propose LeanAttention, a scalable technique of computing\nself-attention for the token-generation phase (decode-phase) of decoder-only\ntransformer models. LeanAttention enables scaling the attention mechanism\nimplementation for the challenging case of long context lengths by re-designing\nthe execution flow for the decode-phase. We identify that the associative\nproperty of online softmax can be treated as a reduction operation thus\nallowing us to parallelize the attention computation over these large context\nlengths. We extend the \"stream-K\" style reduction of tiled calculation to\nself-attention to enable parallel computation resulting in an average of 2.6x\nattention execution speedup over FlashAttention-2 and up to 8.33x speedup for\n512k context lengths.",
+        "subjects": [
+            "cs.AR",
+            "cs.LG",
+            "I.2.7; C.1.4"
+        ],
+        "authors": [
+            "Rya Sanovar",
+            "Srikant Bharadwaj",
+            "Renee St. Amant",
+            "Victor Rühle",
+            "Saravan Rajmohan"
+        ],
+        "published": "2024-05-17T00:52:39Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "A Dual Power Grid Cascading Failure Model for the Vulnerability Analysis",
+        "link": "http://arxiv.org/abs/2405.11311v1",
+        "abstract": "Considering the attacks against the power grid, one of the most effective\napproaches could be the attack to the transmission lines that leads to large\ncascading failures. Hence, the problem of locating the most critical or\nvulnerable transmission lines for a Power Grid Cascading Failure (PGCF) has\ndrawn much attention from the research society. There exists many deterministic\nsolutions and stochastic approximation algorithms aiming to analyze the power\ngrid vulnerability. However, it has been challenging to reveal the correlations\nbetween the transmission lines to identify the critical ones. In this paper, we\npropose a novel approach of learning such correlations via attention mechanism\ninspired by the Transformer based models that were initially designated to\nlearn the correlation of words in sentences. Multiple modifications and\nadjustments are proposed to support the attention mechanism producing an\ninformative correlation matrix, the Attention Matrix. With the Attention\nRanking algorithm, we are able to identify the most critical lines. The\nproposed Dual PGCF model provide a novel and effective analysis to improve the\npower grid resilience against cascading failure, which is proved by extensive\nexperiment results.",
+        "subjects": [
+            "cs.LG",
+            "cs.ET"
+        ],
+        "authors": [
+            "Tianxin Zhou",
+            "Xiang Li",
+            "Haibing Lu"
+        ],
+        "published": "2024-05-18T15:04:44Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "Spatio-temporal Attention-based Hidden Physics-informed Neural Network\n  for Remaining Useful Life Prediction",
+        "link": "http://arxiv.org/abs/2405.12377v1",
+        "abstract": "Predicting the Remaining Useful Life (RUL) is essential in Prognostic Health\nManagement (PHM) for industrial systems. Although deep learning approaches have\nachieved considerable success in predicting RUL, challenges such as low\nprediction accuracy and interpretability pose significant challenges, hindering\ntheir practical implementation. In this work, we introduce a Spatio-temporal\nAttention-based Hidden Physics-informed Neural Network (STA-HPINN) for RUL\nprediction, which can utilize the associated physics of the system degradation.\nThe spatio-temporal attention mechanism can extract important features from the\ninput data. With the self-attention mechanism on both the sensor dimension and\ntime step dimension, the proposed model can effectively extract degradation\ninformation. The hidden physics-informed neural network is utilized to capture\nthe physics mechanisms that govern the evolution of RUL. With the constraint of\nphysics, the model can achieve higher accuracy and reasonable predictions. The\napproach is validated on a benchmark dataset, demonstrating exceptional\nperformance when compared to cutting-edge methods, especially in the case of\ncomplex conditions.",
+        "subjects": [
+            "eess.SY",
+            "cs.LG",
+            "cs.SY"
+        ],
+        "authors": [
+            "Feilong Jiang",
+            "Xiaonan Hou",
+            "Min Xia"
+        ],
+        "published": "2024-05-20T21:10:18Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "Modeling citation worthiness by using attention-based bidirectional long\n  short-term memory networks and interpretable models",
+        "link": "http://dx.doi.org/10.1007/s11192-020-03421-9",
+        "abstract": "Scientist learn early on how to cite scientific sources to support their\nclaims. Sometimes, however, scientists have challenges determining where a\ncitation should be situated -- or, even worse, fail to cite a source\naltogether. Automatically detecting sentences that need a citation (i.e.,\ncitation worthiness) could solve both of these issues, leading to more robust\nand well-constructed scientific arguments. Previous researchers have applied\nmachine learning to this task but have used small datasets and models that do\nnot take advantage of recent algorithmic developments such as attention\nmechanisms in deep learning. We hypothesize that we can develop significantly\naccurate deep learning architectures that learn from large supervised datasets\nconstructed from open access publications. In this work, we propose a\nBidirectional Long Short-Term Memory (BiLSTM) network with attention mechanism\nand contextual information to detect sentences that need citations. We also\nproduce a new, large dataset (PMOA-CITE) based on PubMed Open Access Subset,\nwhich is orders of magnitude larger than previous datasets. Our experiments\nshow that our architecture achieves state of the art performance on the\nstandard ACL-ARC dataset ($F_{1}=0.507$) and exhibits high performance\n($F_{1}=0.856$) on the new PMOA-CITE. Moreover, we show that it can transfer\nlearning across these datasets. We further use interpretable models to\nilluminate how specific language is used to promote and inhibit citations. We\ndiscover that sections and surrounding sentences are crucial for our improved\npredictions. We further examined purported mispredictions of the model, and\nuncovered systematic human mistakes in citation behavior and source data. This\nopens the door for our model to check documents during pre-submission and\npre-archival procedures. We make this new dataset, the code, and a web-based\ntool available to the community.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "authors": [
+            "Tong Zeng",
+            "Daniel E. Acuna"
+        ],
+        "published": "2024-05-20T17:45:36Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "Transformer in Touch: A Survey",
+        "link": "http://arxiv.org/abs/2405.12779v1",
+        "abstract": "The Transformer model, initially achieving significant success in the field\nof natural language processing, has recently shown great potential in the\napplication of tactile perception. This review aims to comprehensively outline\nthe application and development of Transformers in tactile technology. We first\nintroduce the two fundamental concepts behind the success of the Transformer:\nthe self-attention mechanism and large-scale pre-training. Then, we delve into\nthe application of Transformers in various tactile tasks, including but not\nlimited to object recognition, cross-modal generation, and object manipulation,\noffering a concise summary of the core methodologies, performance benchmarks,\nand design highlights. Finally, we suggest potential areas for further research\nand future work, aiming to generate more interest within the community, tackle\nexisting challenges, and encourage the use of Transformer models in the tactile\nfield.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jing Gao",
+            "Ning Cheng",
+            "Bin Fang",
+            "Wenjuan Han"
+        ],
+        "published": "2024-05-21T13:26:27Z",
+        "label": "ATTENTION"
+    },
+    {
+        "title": "Equivariant Spatio-Temporal Attentive Graph Networks to Simulate\n  Physical Dynamics",
+        "link": "http://arxiv.org/abs/2405.12868v1",
+        "abstract": "Learning to represent and simulate the dynamics of physical systems is a\ncrucial yet challenging task. Existing equivariant Graph Neural Network (GNN)\nbased methods have encapsulated the symmetry of physics, \\emph{e.g.},\ntranslations, rotations, etc, leading to better generalization ability.\nNevertheless, their frame-to-frame formulation of the task overlooks the\nnon-Markov property mainly incurred by unobserved dynamics in the environment.\nIn this paper, we reformulate dynamics simulation as a spatio-temporal\nprediction task, by employing the trajectory in the past period to recover the\nNon-Markovian interactions. We propose Equivariant Spatio-Temporal Attentive\nGraph Networks (ESTAG), an equivariant version of spatio-temporal GNNs, to\nfulfill our purpose. At its core, we design a novel Equivariant Discrete\nFourier Transform (EDFT) to extract periodic patterns from the history frames,\nand then construct an Equivariant Spatial Module (ESM) to accomplish spatial\nmessage passing, and an Equivariant Temporal Module (ETM) with the forward\nattention and equivariant pooling mechanisms to aggregate temporal message. We\nevaluate our model on three real datasets corresponding to the molecular-,\nprotein- and macro-level. Experimental results verify the effectiveness of\nESTAG compared to typical spatio-temporal GNNs and equivariant GNNs.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Liming Wu",
+            "Zhichao Hou",
+            "Jirui Yuan",
+            "Yu Rong",
+            "Wenbing Huang"
+        ],
+        "published": "2024-05-21T15:33:21Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Rethinking Independent Cross-Entropy Loss For Graph-Structured Data",
+        "link": "http://arxiv.org/abs/2405.15564v1",
+        "abstract": "Graph neural networks (GNNs) have exhibited prominent performance in learning\ngraph-structured data. Considering node classification task, based on the i.i.d\nassumption among node labels, the traditional supervised learning simply sums\nup cross-entropy losses of the independent training nodes and applies the\naverage loss to optimize GNNs' weights. But different from other data formats,\nthe nodes are naturally connected. It is found that the independent\ndistribution modeling of node labels restricts GNNs' capability to generalize\nover the entire graph and defend adversarial attacks. In this work, we propose\na new framework, termed joint-cluster supervised learning, to model the joint\ndistribution of each node with its corresponding cluster. We learn the joint\ndistribution of node and cluster labels conditioned on their representations,\nand train GNNs with the obtained joint loss. In this way, the data-label\nreference signals extracted from the local cluster explicitly strengthen the\ndiscrimination ability on the target node. The extensive experiments\ndemonstrate that our joint-cluster supervised learning can effectively bolster\nGNNs' node classification accuracy. Furthermore, being benefited from the\nreference signals which may be free from spiteful interference, our learning\nparadigm significantly protects the node classification from being affected by\nthe adversarial attack.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Rui Miao",
+            "Kaixiong Zhou",
+            "Yili Wang",
+            "Ninghao Liu",
+            "Ying Wang",
+            "Xin Wang"
+        ],
+        "published": "2024-05-24T13:52:41Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Learning from Linear Algebra: A Graph Neural Network Approach to\n  Preconditioner Design for Conjugate Gradient Solvers",
+        "link": "http://arxiv.org/abs/2405.15557v1",
+        "abstract": "Large linear systems are ubiquitous in modern computational science. The main\nrecipe for solving them is iterative solvers with well-designed\npreconditioners. Deep learning models may be used to precondition residuals\nduring iteration of such linear solvers as the conjugate gradient (CG) method.\nNeural network models require an enormous number of parameters to approximate\nwell in this setup. Another approach is to take advantage of small graph neural\nnetworks (GNNs) to construct preconditioners of the predefined sparsity\npattern. In our work, we recall well-established preconditioners from linear\nalgebra and use them as a starting point for training the GNN. Numerical\nexperiments demonstrate that our approach outperforms both classical methods\nand neural network-based preconditioning. We also provide a heuristic\njustification for the loss function used and validate our approach on complex\ndatasets.",
+        "subjects": [
+            "cs.LG",
+            "cs.NA",
+            "math.NA"
+        ],
+        "authors": [
+            "Vladislav Trifonov",
+            "Alexander Rudikov",
+            "Oleg Iliev",
+            "Ivan Oseledets",
+            "Ekaterina Muravleva"
+        ],
+        "published": "2024-05-24T13:44:30Z",
+        "label": "GNN"
+    },
+    {
+        "title": "SeBot: Structural Entropy Guided Multi-View Contrastive Learning for\n  Social Bot Detection",
+        "link": "http://arxiv.org/abs/2405.11225v1",
+        "abstract": "Recent advancements in social bot detection have been driven by the adoption\nof Graph Neural Networks. The social graph, constructed from social network\ninteractions, contains benign and bot accounts that influence each other.\nHowever, previous graph-based detection methods that follow the transductive\nmessage-passing paradigm may not fully utilize hidden graph information and are\nvulnerable to adversarial bot behavior. The indiscriminate message passing\nbetween nodes from different categories and communities results in excessively\nhomogeneous node representations, ultimately reducing the effectiveness of\nsocial bot detectors. In this paper, we propose SEBot, a novel multi-view\ngraph-based contrastive learning-enabled social bot detector. In particular, we\nuse structural entropy as an uncertainty metric to optimize the entire graph's\nstructure and subgraph-level granularity, revealing the implicitly existing\nhierarchical community structure. And we design an encoder to enable message\npassing beyond the homophily assumption, enhancing robustness to adversarial\nbehaviors of social bots. Finally, we employ multi-view contrastive learning to\nmaximize mutual information between different views and enhance the detection\nperformance through multi-task learning. Experimental results demonstrate that\nour approach significantly improves the performance of social bot detection\ncompared with SOTA methods.",
+        "subjects": [
+            "cs.SI",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yingguang Yang",
+            "Qi Wu",
+            "Buyun He",
+            "Hao Peng",
+            "Renyu Yang",
+            "Zhifeng Hao",
+            "Yong Liao"
+        ],
+        "published": "2024-05-18T08:16:11Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Detecting Complex Multi-step Attacks with Explainable Graph Neural\n  Network",
+        "link": "http://arxiv.org/abs/2405.11335v1",
+        "abstract": "Complex multi-step attacks have caused significant damage to numerous\ncritical infrastructures. To detect such attacks, graph neural network based\nmethods have shown promising results by modeling the system's events as a\ngraph. However, existing methods still face several challenges when deployed in\npractice. First, there is a lack of sufficient real attack data especially\nconsidering the large volume of normal data. Second, the modeling of event\ngraphs is challenging due to their dynamic and heterogeneous nature. Third, the\nlack of explanation in learning models undermines the trustworthiness of such\nmethods in production environments. To address the above challenges, in this\npaper, we propose an attack detection method, Trace2Vec. The approach first\ndesigns an erosion function to augment rare attack samples, and integrates them\ninto the event graphs. Next, it models the event graphs via a continuous-time\ndynamic heterogeneous graph neural network. Finally, it employs the Monte Carlo\ntree search algorithm to identify events with greater contributions to the\nattack, thus enhancing the explainability of the detection result. We have\nimplemented a prototype for Trace2Vec, and the experimental evaluations\ndemonstrate its superior detection and explanation performance compared to\nexisting methods.",
+        "subjects": [
+            "cs.CR"
+        ],
+        "authors": [
+            "Wei Liu",
+            "Peng Gao",
+            "Haotian Zhang",
+            "Ke Li",
+            "Weiyong Yang",
+            "Xingshen Wei",
+            "Shuji Wu"
+        ],
+        "published": "2024-05-18T16:47:21Z",
+        "label": "GNN"
+    },
+    {
+        "title": "GinAR: An End-To-End Multivariate Time Series Forecasting Model Suitable\n  for Variable Missing",
+        "link": "http://arxiv.org/abs/2405.11333v1",
+        "abstract": "Multivariate time series forecasting (MTSF) is crucial for decision-making to\nprecisely forecast the future values/trends, based on the complex relationships\nidentified from historical observations of multiple sequences. Recently,\nSpatial-Temporal Graph Neural Networks (STGNNs) have gradually become the theme\nof MTSF model as their powerful capability in mining spatial-temporal\ndependencies, but almost of them heavily rely on the assumption of historical\ndata integrity. In reality, due to factors such as data collector failures and\ntime-consuming repairment, it is extremely challenging to collect the whole\nhistorical observations without missing any variable. In this case, STGNNs can\nonly utilize a subset of normal variables and easily suffer from the incorrect\nspatial-temporal dependency modeling issue, resulting in the degradation of\ntheir forecasting performance. To address the problem, in this paper, we\npropose a novel Graph Interpolation Attention Recursive Network (named GinAR)\nto precisely model the spatial-temporal dependencies over the limited collected\ndata for forecasting. In GinAR, it consists of two key components, that is,\ninterpolation attention and adaptive graph convolution to take place of the\nfully connected layer of simple recursive units, and thus are capable of\nrecovering all missing variables and reconstructing the correct\nspatial-temporal dependencies for recursively modeling of multivariate time\nseries data, respectively. Extensive experiments conducted on five real-world\ndatasets demonstrate that GinAR outperforms 11 SOTA baselines, and even when\n90% of variables are missing, it can still accurately predict the future values\nof all variables.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chengqing Yu",
+            "Fei Wang",
+            "Zezhi Shao",
+            "Tangwen Qian",
+            "Zhao Zhang",
+            "Wei Wei",
+            "Yongjun Xu"
+        ],
+        "published": "2024-05-18T16:42:44Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Hi-GMAE: Hierarchical Graph Masked Autoencoders",
+        "link": "http://arxiv.org/abs/2405.10642v1",
+        "abstract": "Graph Masked Autoencoders (GMAEs) have emerged as a notable self-supervised\nlearning approach for graph-structured data. Existing GMAE models primarily\nfocus on reconstructing node-level information, categorizing them as\nsingle-scale GMAEs. This methodology, while effective in certain contexts,\ntends to overlook the complex hierarchical structures inherent in many\nreal-world graphs. For instance, molecular graphs exhibit a clear hierarchical\norganization in the form of the atoms-functional groups-molecules structure.\nHence, the inability of single-scale GMAE models to incorporate these\nhierarchical relationships often leads to their inadequate capture of crucial\nhigh-level graph information, resulting in a noticeable decline in performance.\nTo address this limitation, we propose Hierarchical Graph Masked AutoEncoders\n(Hi-GMAE), a novel multi-scale GMAE framework designed to handle the\nhierarchical structures within graphs. First, Hi-GMAE constructs a multi-scale\ngraph hierarchy through graph pooling, enabling the exploration of graph\nstructures across different granularity levels. To ensure masking uniformity of\nsubgraphs across these scales, we propose a novel coarse-to-fine strategy that\ninitiates masking at the coarsest scale and progressively back-projects the\nmask to the finer scales. Furthermore, we integrate a gradual recovery strategy\nwith the masking process to mitigate the learning challenges posed by\ncompletely masked subgraphs. Diverging from the standard graph neural network\n(GNN) used in GMAE models, Hi-GMAE modifies its encoder and decoder into\nhierarchical structures. This entails using GNN at the finer scales for\ndetailed local graph analysis and employing a graph transformer at coarser\nscales to capture global information. Our experiments on 15 graph datasets\nconsistently demonstrate that Hi-GMAE outperforms 17 state-of-the-art\nself-supervised competitors.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "authors": [
+            "Chuang Liu",
+            "Zelin Yao",
+            "Yibing Zhan",
+            "Xueqi Ma",
+            "Dapeng Tao",
+            "Jia Wu",
+            "Wenbin Hu",
+            "Shirui Pan",
+            "Bo Du"
+        ],
+        "published": "2024-05-17T09:08:37Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Harnessing Collective Structure Knowledge in Data Augmentation for Graph\n  Neural Networks",
+        "link": "http://arxiv.org/abs/2405.10633v1",
+        "abstract": "Graph neural networks (GNNs) have achieved state-of-the-art performance in\ngraph representation learning. Message passing neural networks, which learn\nrepresentations through recursively aggregating information from each node and\nits neighbors, are among the most commonly-used GNNs. However, a wealth of\nstructural information of individual nodes and full graphs is often ignored in\nsuch process, which restricts the expressive power of GNNs. Various graph data\naugmentation methods that enable the message passing with richer structure\nknowledge have been introduced as one main way to tackle this issue, but they\nare often focused on individual structure features and difficult to scale up\nwith more structure features. In this work we propose a novel approach, namely\ncollective structure knowledge-augmented graph neural network (CoS-GNN), in\nwhich a new message passing method is introduced to allow GNNs to harness a\ndiverse set of node- and graph-level structure features, together with original\nnode features/attributes, in augmented graphs. In doing so, our approach\nlargely improves the structural knowledge modeling of GNNs in both node and\ngraph levels, resulting in substantially improved graph representations. This\nis justified by extensive empirical results where CoS-GNN outperforms\nstate-of-the-art models in various graph-level learning tasks, including graph\nclassification, anomaly detection, and out-of-distribution generalization.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "authors": [
+            "Rongrong Ma",
+            "Guansong Pang",
+            "Ling Chen"
+        ],
+        "published": "2024-05-17T08:50:00Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Leveraging Discourse Structure for Extractive Meeting Summarization",
+        "link": "http://arxiv.org/abs/2405.11055v2",
+        "abstract": "We introduce an extractive summarization system for meetings that leverages\ndiscourse structure to better identify salient information from complex\nmulti-party discussions. Using discourse graphs to represent semantic relations\nbetween the contents of utterances in a meeting, we train a GNN-based node\nclassification model to select the most important utterances, which are then\ncombined to create an extractive summary. Experimental results on AMI and ICSI\ndemonstrate that our approach surpasses existing text-based and graph-based\nextractive summarization systems, as measured by both classification and\nsummarization metrics. Additionally, we conduct ablation studies on discourse\nstructure and relation type to provide insights for future NLP applications\nleveraging discourse analysis theory.",
+        "subjects": [
+            "cs.CL",
+            "cs.AI"
+        ],
+        "authors": [
+            "Virgile Rennard",
+            "Guokan Shang",
+            "Michalis Vazirgiannis",
+            "Julie Hunter"
+        ],
+        "published": "2024-05-17T19:06:20Z",
+        "label": "GNN"
+    },
+    {
+        "title": "GraSS: Combining Graph Neural Networks with Expert Knowledge for SAT\n  Solver Selection",
+        "link": "http://arxiv.org/abs/2405.11024v1",
+        "abstract": "Boolean satisfiability (SAT) problems are routinely solved by SAT solvers in\nreal-life applications, yet solving time can vary drastically between solvers\nfor the same instance. This has motivated research into machine learning models\nthat can predict, for a given SAT instance, which solver to select among\nseveral options. Existing SAT solver selection methods all rely on some\nhand-picked instance features, which are costly to compute and ignore the\nstructural information in SAT graphs. In this paper we present GraSS, a novel\napproach for automatic SAT solver selection based on tripartite graph\nrepresentations of instances and a heterogeneous graph neural network (GNN)\nmodel. While GNNs have been previously adopted in other SAT-related tasks, they\ndo not incorporate any domain-specific knowledge and ignore the runtime\nvariation introduced by different clause orders. We enrich the graph\nrepresentation with domain-specific decisions, such as novel node feature\ndesign, positional encodings for clauses in the graph, a GNN architecture\ntailored to our tripartite graphs and a runtime-sensitive loss function.\nThrough extensive experiments, we demonstrate that this combination of raw\nrepresentations and domain-specific choices leads to improvements in runtime\nfor a pool of seven state-of-the-art solvers on both an industrial circuit\ndesign benchmark, and on instances from the 20-year Anniversary Track of the\n2022 SAT Competition.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhanguang Zhang",
+            "Didier Chetelat",
+            "Joseph Cotnareanu",
+            "Amur Ghose",
+            "Wenyi Xiao",
+            "Hui-Ling Zhen",
+            "Yingxue Zhang",
+            "Jianye Hao",
+            "Mark Coates",
+            "Mingxuan Yuan"
+        ],
+        "published": "2024-05-17T18:00:50Z",
+        "label": "GNN"
+    },
+    {
+        "title": "Automated Multi-level Preference for MLLMs",
+        "link": "http://arxiv.org/abs/2405.11165v1",
+        "abstract": "Current multimodal Large Language Models (MLLMs) suffer from\n``hallucination'', occasionally generating responses that are not grounded in\nthe input images. To tackle this challenge, one promising path is to utilize\nreinforcement learning from human feedback (RLHF), which steers MLLMs towards\nlearning superior responses while avoiding inferior ones. We rethink the common\npractice of using binary preferences (\\emph{i.e.}, superior, inferior), and\nfind that adopting multi-level preferences (\\emph{e.g.}, superior, medium,\ninferior) is better for two benefits: 1) It narrows the gap between adjacent\nlevels, thereby encouraging MLLMs to discern subtle differences. 2) It further\nintegrates cross-level comparisons (beyond adjacent-level comparisons), thus\nproviding a broader range of comparisons with hallucination examples. To verify\nour viewpoint, we present the Automated Multi-level Preference (\\textbf{AMP})\nframework for MLLMs. To facilitate this framework, we first develop an\nautomated dataset generation pipeline that provides high-quality multi-level\npreference datasets without any human annotators. Furthermore, we design the\nMulti-level Direct Preference Optimization (MDPO) algorithm to robustly conduct\ncomplex multi-level preference learning. Additionally, we propose a new\nhallucination benchmark, MRHal-Bench. Extensive experiments across public\nhallucination and general benchmarks, as well as our MRHal-Bench, demonstrate\nthe effectiveness of our proposed method.",
+        "subjects": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mengxi Zhang",
+            "Kang Rong"
+        ],
+        "published": "2024-05-18T03:49:37Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "The Power of Active Multi-Task Learning in Reinforcement Learning from\n  Human Feedback",
+        "link": "http://arxiv.org/abs/2405.11226v1",
+        "abstract": "Reinforcement learning from human feedback (RLHF) has contributed to\nperformance improvements in large language models. To tackle its reliance on\nsubstantial amounts of human-labeled data, a successful approach is multi-task\nrepresentation learning, which involves learning a high-quality,\nlow-dimensional representation from a wide range of source tasks. In this\npaper, we formulate RLHF as the contextual dueling bandit problem and assume a\ncommon linear representation. We demonstrate that the sample complexity of\nsource tasks in multi-task RLHF can be reduced by considering task relevance\nand allocating different sample sizes to source tasks with varying task\nrelevance. We further propose an algorithm to estimate task relevance by a\nsmall number of additional data and then learn a policy. We prove that to\nachieve $\\varepsilon-$optimal, the sample complexity of the source tasks can be\nsignificantly reduced compared to uniform sampling. Additionally, the sample\ncomplexity of the target task is only linear in the dimension of the latent\nspace, thanks to representation learning.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "authors": [
+            "Ruitao Chen",
+            "Liwei Wang"
+        ],
+        "published": "2024-05-18T08:29:15Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Generative AI and Large Language Models for Cyber Security: All Insights\n  You Need",
+        "link": "http://arxiv.org/abs/2405.12750v1",
+        "abstract": "This paper provides a comprehensive review of the future of cybersecurity\nthrough Generative AI and Large Language Models (LLMs). We explore LLM\napplications across various domains, including hardware design security,\nintrusion detection, software engineering, design verification, cyber threat\nintelligence, malware detection, and phishing detection. We present an overview\nof LLM evolution and its current state, focusing on advancements in models such\nas GPT-4, GPT-3.5, Mixtral-8x7B, BERT, Falcon2, and LLaMA. Our analysis extends\nto LLM vulnerabilities, such as prompt injection, insecure output handling,\ndata poisoning, DDoS attacks, and adversarial instructions. We delve into\nmitigation strategies to protect these models, providing a comprehensive look\nat potential attack scenarios and prevention techniques. Furthermore, we\nevaluate the performance of 42 LLM models in cybersecurity knowledge and\nhardware security, highlighting their strengths and weaknesses. We thoroughly\nevaluate cybersecurity datasets for LLM training and testing, covering the\nlifecycle from data creation to usage and identifying gaps for future research.\nIn addition, we review new strategies for leveraging LLMs, including techniques\nlike Half-Quadratic Quantization (HQQ), Reinforcement Learning with Human\nFeedback (RLHF), Direct Preference Optimization (DPO), Quantized Low-Rank\nAdapters (QLoRA), and Retrieval-Augmented Generation (RAG). These insights aim\nto enhance real-time cybersecurity defenses and improve the sophistication of\nLLM applications in threat detection and response. Our paper provides a\nfoundational understanding and strategic direction for integrating LLMs into\nfuture cybersecurity frameworks, emphasizing innovation and robust model\ndeployment to safeguard against evolving cyber threats.",
+        "subjects": [
+            "cs.CR",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mohamed Amine Ferrag",
+            "Fatima Alwahedi",
+            "Ammar Battah",
+            "Bilel Cherif",
+            "Abdechakour Mechri",
+            "Norbert Tihanyi"
+        ],
+        "published": "2024-05-21T13:02:27Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Curriculum Direct Preference Optimization for Diffusion and Consistency\n  Models",
+        "link": "http://arxiv.org/abs/2405.13637v2",
+        "abstract": "Direct Preference Optimization (DPO) has been proposed as an effective and\nefficient alternative to reinforcement learning from human feedback (RLHF). In\nthis paper, we propose a novel and enhanced version of DPO based on curriculum\nlearning for text-to-image generation. Our method is divided into two training\nstages. First, a ranking of the examples generated for each prompt is obtained\nby employing a reward model. Then, increasingly difficult pairs of examples are\nsampled and provided to a text-to-image generative (diffusion or consistency)\nmodel. Generated samples that are far apart in the ranking are considered to\nform easy pairs, while those that are close in the ranking form hard pairs. In\nother words, we use the rank difference between samples as a measure of\ndifficulty. The sampled pairs are split into batches according to their\ndifficulty levels, which are gradually used to train the generative model. Our\napproach, Curriculum DPO, is compared against state-of-the-art fine-tuning\napproaches on three benchmarks, outperforming the competing methods in terms of\ntext alignment, aesthetics and human preference. Our code is available at\nhttps://anonymous.4open.science/r/Curriculum-DPO-EE14.",
+        "subjects": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Florinel-Alin Croitoru",
+            "Vlad Hondru",
+            "Radu Tudor Ionescu",
+            "Nicu Sebe",
+            "Mubarak Shah"
+        ],
+        "published": "2024-05-22T13:36:48Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "LIRE: listwise reward enhancement for preference alignment",
+        "link": "http://arxiv.org/abs/2405.13516v1",
+        "abstract": "Recently, tremendous strides have been made to align the generation of Large\nLanguage Models (LLMs) with human values to mitigate toxic or unhelpful\ncontent. Leveraging Reinforcement Learning from Human Feedback (RLHF) proves\neffective and is widely adopted by researchers. However, implementing RLHF is\ncomplex, and its sensitivity to hyperparameters renders achieving stable\nperformance and scalability challenging. Furthermore, prevailing approaches to\npreference alignment primarily concentrate on pairwise comparisons, with\nlimited exploration into multi-response scenarios, thereby overlooking the\npotential richness within the candidate pool. For the above reasons, we propose\na new approach: Listwise Reward Enhancement for Preference Alignment (LIRE), a\ngradient-based reward optimization approach that incorporates the offline\nrewards of multiple responses into a streamlined listwise framework, thus\neliminating the need for online sampling during training. LIRE is\nstraightforward to implement, requiring minimal parameter tuning, and\nseamlessly aligns with the pairwise paradigm while naturally extending to\nmulti-response scenarios. Moreover, we introduce a self-enhancement algorithm\naimed at iteratively refining the reward during training. Our experiments\ndemonstrate that LIRE consistently outperforms existing methods across several\nbenchmarks on dialogue and summarization tasks, with good transferability to\nout-of-distribution data, assessed using proxy reward models and human\nannotators.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "authors": [
+            "Mingye Zhu",
+            "Yi Liu",
+            "Lei Zhang",
+            "Junbo Guo",
+            "Zhendong Mao"
+        ],
+        "published": "2024-05-22T10:21:50Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Direct Preference Optimization With Unobserved Preference Heterogeneity",
+        "link": "http://arxiv.org/abs/2405.15065v1",
+        "abstract": "RLHF has emerged as a pivotal step in aligning language models with human\nobjectives and values. It typically involves learning a reward model from human\npreference data and then using reinforcement learning to update the generative\nmodel accordingly. Conversely, Direct Preference Optimization (DPO) directly\noptimizes the generative model with preference data, skipping reinforcement\nlearning. However, both RLHF and DPO assume uniform preferences, overlooking\nthe reality of diverse human annotators. This paper presents a new method to\nalign generative models with varied human preferences. We propose an\nExpectation-Maximization adaptation to DPO, generating a mixture of models\nbased on latent preference types of the annotators. We then introduce a min-max\nregret ensemble learning model to produce a single generative method to\nminimize worst-case regret among annotator subgroups with similar latent\nfactors. Our algorithms leverage the simplicity of DPO while accommodating\ndiverse preferences. Experimental results validate the effectiveness of our\napproach in producing equitable generative policies.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "authors": [
+            "Keertana Chidambaram",
+            "Karthik Vinay Seetharaman",
+            "Vasilis Syrgkanis"
+        ],
+        "published": "2024-05-23T21:25:20Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Axioms for AI Alignment from Human Feedback",
+        "link": "http://arxiv.org/abs/2405.14758v1",
+        "abstract": "In the context of reinforcement learning from human feedback (RLHF), the\nreward function is generally derived from maximum likelihood estimation of a\nrandom utility model based on pairwise comparisons made by humans. The problem\nof learning a reward function is one of preference aggregation that, we argue,\nlargely falls within the scope of social choice theory. From this perspective,\nwe can evaluate different aggregation methods via established axioms, examining\nwhether these methods meet or fail well-known standards. We demonstrate that\nboth the Bradley-Terry-Luce Model and its broad generalizations fail to meet\nbasic axioms. In response, we develop novel rules for learning reward functions\nwith strong axiomatic guarantees. A key innovation from the standpoint of\nsocial choice is that our problem has a linear structure, which greatly\nrestricts the space of feasible rules and leads to a new paradigm that we call\nlinear social choice.",
+        "subjects": [
+            "cs.GT",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Luise Ge",
+            "Daniel Halpern",
+            "Evi Micha",
+            "Ariel D. Procaccia",
+            "Itai Shapira",
+            "Yevgeniy Vorobeychik",
+            "Junlin Wu"
+        ],
+        "published": "2024-05-23T16:29:29Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+        "link": "http://arxiv.org/abs/2405.14734v1",
+        "abstract": "Direct Preference Optimization (DPO) is a widely used offline preference\noptimization algorithm that reparameterizes reward functions in reinforcement\nlearning from human feedback (RLHF) to enhance simplicity and training\nstability. In this work, we propose SimPO, a simpler yet more effective\napproach. The effectiveness of SimPO is attributed to a key design: using the\naverage log probability of a sequence as the implicit reward. This reward\nformulation better aligns with model generation and eliminates the need for a\nreference model, making it more compute and memory efficient. Additionally, we\nintroduce a target reward margin to the Bradley-Terry objective to encourage a\nlarger margin between the winning and losing responses, further enhancing the\nalgorithm's performance. We compare SimPO to DPO and its latest variants across\nvarious state-of-the-art training setups, including both base and\ninstruction-tuned models like Mistral and Llama3. We evaluated on extensive\ninstruction-following benchmarks, including AlpacaEval 2, MT-Bench, and the\nrecent challenging Arena-Hard benchmark. Our results demonstrate that SimPO\nconsistently and significantly outperforms existing approaches without\nsubstantially increasing response length. Specifically, SimPO outperforms DPO\nby up to 6.4 points on AlpacaEval 2 and by up to 7.5 points on Arena-Hard. Our\ntop-performing model, built on Llama3-8B-Instruct, achieves a remarkable 44.7\nlength-controlled win rate on AlpacaEval 2 -- surpassing Claude 3 Opus on the\nleaderboard, and a 33.8 win rate on Arena-Hard -- making it the strongest 8B\nopen-source model.",
+        "subjects": [
+            "cs.CL",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yu Meng",
+            "Mengzhou Xia",
+            "Danqi Chen"
+        ],
+        "published": "2024-05-23T16:01:46Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Multi-turn Reinforcement Learning from Preference Human Feedback",
+        "link": "http://arxiv.org/abs/2405.14655v1",
+        "abstract": "Reinforcement Learning from Human Feedback (RLHF) has become the standard\napproach for aligning Large Language Models (LLMs) with human preferences,\nallowing LLMs to demonstrate remarkable abilities in various tasks. Existing\nmethods work by emulating the preferences at the single decision (turn) level,\nlimiting their capabilities in settings that require planning or multi-turn\ninteractions to achieve a long-term goal. In this paper, we address this issue\nby developing novel methods for Reinforcement Learning (RL) from preference\nfeedback between two full multi-turn conversations. In the tabular setting, we\npresent a novel mirror-descent-based policy optimization algorithm for the\ngeneral multi-turn preference-based RL problem, and prove its convergence to\nNash equilibrium. To evaluate performance, we create a new environment,\nEducation Dialogue, where a teacher agent guides a student in learning a random\ntopic, and show that a deep RL variant of our algorithm outperforms RLHF\nbaselines. Finally, we show that in an environment with explicit rewards, our\nalgorithm recovers the same performance as a reward-based RL baseline, despite\nrelying solely on a weaker preference signal.",
+        "subjects": [
+            "cs.LG"
+        ],
+        "authors": [
+            "Lior Shani",
+            "Aviv Rosenberg",
+            "Asaf Cassel",
+            "Oran Lang",
+            "Daniele Calandriello",
+            "Avital Zipori",
+            "Hila Noga",
+            "Orgad Keller",
+            "Bilal Piot",
+            "Idan Szpektor",
+            "Avinatan Hassidim",
+            "Yossi Matias",
+            "Rémi Munos"
+        ],
+        "published": "2024-05-23T14:53:54Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Reinforcement Learning for Fine-tuning Text-to-speech Diffusion Models",
+        "link": "http://arxiv.org/abs/2405.14632v1",
+        "abstract": "Recent advancements in generative models have sparked significant interest\nwithin the machine learning community. Particularly, diffusion models have\ndemonstrated remarkable capabilities in synthesizing images and speech. Studies\nsuch as those by Lee et al. [19], Black et al. [4], Wang et al. [36], and Fan\net al. [8] illustrate that Reinforcement Learning with Human Feedback (RLHF)\ncan enhance diffusion models for image synthesis. However, due to architectural\ndifferences between these models and those employed in speech synthesis, it\nremains uncertain whether RLHF could similarly benefit speech synthesis models.\nIn this paper, we explore the practical application of RLHF to diffusion-based\ntext-to-speech synthesis, leveraging the mean opinion score (MOS) as predicted\nby UTokyo-SaruLab MOS prediction system [29] as a proxy loss. We introduce\ndiffusion model loss-guided RL policy optimization (DLPO) and compare it\nagainst other RLHF approaches, employing the NISQA speech quality and\nnaturalness assessment model [21] and human preference experiments for further\nevaluation. Our results show that RLHF can enhance diffusion-based\ntext-to-speech synthesis models, and, moreover, DLPO can better improve\ndiffusion models in generating natural and high quality speech audios.",
+        "subjects": [
+            "cs.LG",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jingyi Chen",
+            "Ju-Seung Byun",
+            "Micha Elsner",
+            "Andrew Perrault"
+        ],
+        "published": "2024-05-23T14:39:35Z",
+        "label": "RLHF"
+    },
+    {
+        "title": "Adjacent Leader Decentralized Stochastic Gradient Descent",
+        "link": "http://arxiv.org/abs/2405.11389v1",
+        "abstract": "This work focuses on the decentralized deep learning optimization framework.\nWe propose Adjacent Leader Decentralized Gradient Descent (AL-DSGD), for\nimproving final model performance, accelerating convergence, and reducing the\ncommunication overhead of decentralized deep learning optimizers. AL-DSGD\nrelies on two main ideas. Firstly, to increase the influence of the strongest\nlearners on the learning system it assigns weights to different neighbor\nworkers according to both their performance and the degree when averaging among\nthem, and it applies a corrective force on the workers dictated by both the\ncurrently best-performing neighbor and the neighbor with the maximal degree.\nSecondly, to alleviate the problem of the deterioration of the convergence\nspeed and performance of the nodes with lower degrees, AL-DSGD relies on\ndynamic communication graphs, which effectively allows the workers to\ncommunicate with more nodes while keeping the degrees of the nodes low.\nExperiments demonstrate that AL-DSGD accelerates the convergence of the\ndecentralized state-of-the-art techniques and improves their test performance\nespecially in the communication constrained environments. We also theoretically\nprove the convergence of the proposed scheme. Finally, we release to the\ncommunity a highly general and concise PyTorch-based library for distributed\ntraining of deep learning models that supports easy implementation of any\ndistributed deep learning approach ((a)synchronous, (de)centralized).",
+        "subjects": [
+            "cs.LG"
+        ],
+        "authors": [
+            "Haoze He",
+            "Jing Wang",
+            "Anna Choromanska"
+        ],
+        "published": "2024-05-18T20:24:11Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "Control-Aware Transmit Power Allocation for 6G In-Factory Subnetwork\n  Control Systems",
+        "link": "http://arxiv.org/abs/2405.11355v1",
+        "abstract": "In this paper, we develop a novel power control solution for\nsubnetworks-enabled distributed control systems in factory settings. We propose\na channel-independent control-aware (CICA) policy based on the logistic model\nand learn the parameters using Bayesian optimization with a multi-objective\ntree-structured Parzen estimator. The objective is to minimize the control cost\nof the plants, measured as a finite horizon linear quadratic regulator cost.\nThe proposed policy can be executed in a fully distributed manner and does not\nrequire cumbersome measurement of channel gain information, hence it is\nscalable for large-scale deployment of subnetworks for distributed control\napplications. With extensive numerical simulation and considering different\ndensities of subnetworks, we show that the proposed method can achieve\ncompetitive stability performance and high availability for large-scale\ndistributed control plants with limited radio resources.",
+        "subjects": [
+            "eess.SY",
+            "cs.SY"
+        ],
+        "authors": [
+            "Daniel Abode",
+            "Pedro Maia de Sant Ana",
+            "Alexander Artemenko",
+            "Ramoni Adeogun",
+            "Gilberto Berardinelli"
+        ],
+        "published": "2024-05-18T17:58:40Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "Large Neighborhood Prioritized Search for Combinatorial Optimization\n  with Answer Set Programming",
+        "link": "http://arxiv.org/abs/2405.11305v1",
+        "abstract": "We propose Large Neighborhood Prioritized Search (LNPS) for solving\ncombinatorial optimization problems in Answer Set Programming (ASP). LNPS is a\nmetaheuristic that starts with an initial solution and then iteratively tries\nto find better solutions by alternately destroying and prioritized searching\nfor a current solution. Due to the variability of neighborhoods, LNPS allows\nfor flexible search without strongly depending on the destroy operators. We\npresent an implementation of LNPS based on ASP. The resulting heulingo solver\ndemonstrates that LNPS can significantly enhance the solving performance of ASP\nfor optimization. Furthermore, we establish the competitiveness of our LNPS\napproach by empirically contrasting it to (adaptive) large neighborhood search.",
+        "subjects": [
+            "cs.AI"
+        ],
+        "authors": [
+            "Irumi Sugimori",
+            "Katsumi Inoue",
+            "Hidetomo Nabeshima",
+            "Torsten Schaub",
+            "Takehide Soh",
+            "Naoyuki Tamura",
+            "Mutsunori Banbara"
+        ],
+        "published": "2024-05-18T14:37:43Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "A two-phase-ACO algorithm for solving nonlinear optimization problems\n  subjected to fuzzy relational equations",
+        "link": "http://arxiv.org/abs/2405.14888v1",
+        "abstract": "In this paper, we investigate nonlinear optimization problems whose\nconstraints are defined as fuzzy relational equations (FRE) with max-min\ncomposition. Since the feasible solution set of the FRE is often a non-convex\nset and the resolution of the FREs is an NP-hard problem, conventional\nnonlinear approaches may involve high computational complexity. Based on the\ntheoretical aspects of the problem, an algorithm (called FRE-ACO algorithm) is\npresented which benefits from the structural properties of the FREs, the\nability of discrete ant colony optimization algorithm (denoted by ACO) to\ntackle combinatorial problems, and that of continuous ant colony optimization\nalgorithm (denoted by ACOR) to solve continuous optimization problems. In the\ncurrent method, the fundamental ideas underlying ACO and ACOR are combined and\nform an efficient approach to solve the nonlinear optimization problems\nconstrained with such non-convex regions. Moreover, FRE-ACO algorithm preserves\nthe feasibility of new generated solutions without having to initially find the\nminimal solutions of the feasible region or check the feasibility after\ngenerating the new solutions. FRE-ACO algorithm has been compared with some\nrelated works proposed for solving nonlinear optimization problems with respect\nto maxmin FREs. The obtained results demonstrate that the proposed algorithm\nhas a higher convergence rate and requires a less number of function\nevaluations compared to other considered algorithms.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "authors": [
+            "Amin Ghodousian",
+            "Sara Zal"
+        ],
+        "published": "2024-05-17T09:24:07Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "Optimal Service Placement, Request Routing and CPU Sizing in Cooperative\n  Mobile Edge Computing Networks for Delay-Sensitive Applications",
+        "link": "http://arxiv.org/abs/2405.10648v1",
+        "abstract": "We study joint optimization of service placement, request routing, and CPU\nsizing in a cooperative MEC system. The problem is considered from the\nperspective of the service provider (SP), which delivers heterogeneous\nMEC-enabled delay-sensitive services, and needs to pay for the used resources\nto the mobile network operators and the cloud provider, while earning revenue\nfrom the served requests. We formulate the problem of maximizing the SP's total\nprofit subject to the computation, storage, and communication constraints of\neach edge node and end-to-end delay requirements of the services as a\nmixed-integer non-convex optimization problem, and prove it to be NP-hard.\n  To tackle the challenges in solving the problem, we first introduce a design\ntrade-off parameter for different delay requirements of each service, which\nmaintains flexibility in prioritizing them, and transform the original\noptimization problem by the new delay constraints. Then, by exploiting a hidden\nconvexity, we reformulate the delay constraints into an equivalent form. Next,\nto handle the challenge of the complicating (integer) variables, using primal\ndecomposition, we decompose the problem into an equivalent form of master and\ninner sub-problems over the mixed and real variables, respectively. We then\nemploy a cutting-plane approach for building up adequate representations of the\nextremal value of the inner problem as a function of the complicating variables\nand the set of values of the complicating variables for which the inner problem\nis feasible. Finally, we propose a solution strategy based on generalized\nBenders decomposition and prove its convergence to the optimal solution within\na limited number of iterations. Extensive simulation results demonstrate that\nthe proposed scheme significantly outperforms the existing mechanisms in terms\nof the SP's profit, cache hit ratio, running time, and end-to-end delay.",
+        "subjects": [
+            "cs.NI",
+            "cs.IT",
+            "math.IT"
+        ],
+        "authors": [
+            "Naeimeh Omidvar",
+            "Mahdieh Ahmadi",
+            "Seyed Mohammad Hosseini"
+        ],
+        "published": "2024-05-17T09:21:04Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "CMA-ES for Safe Optimization",
+        "link": "http://arxiv.org/abs/2405.10534v1",
+        "abstract": "In several real-world applications in medical and control engineering, there\nare unsafe solutions whose evaluations involve inherent risk. This optimization\nsetting is known as safe optimization and formulated as a specialized type of\nconstrained optimization problem with constraints for safety functions. Safe\noptimization requires performing efficient optimization without evaluating\nunsafe solutions. A few studies have proposed the optimization methods for safe\noptimization based on Bayesian optimization and the evolutionary algorithm.\nHowever, Bayesian optimization-based methods often struggle to achieve superior\nsolutions, and the evolutionary algorithm-based method fails to effectively\nreduce unsafe evaluations. This study focuses on CMA-ES as an efficient\nevolutionary algorithm and proposes an optimization method termed safe CMA-ES.\nThe safe CMA-ES is designed to achieve both safety and efficiency in safe\noptimization. The safe CMA-ES estimates the Lipschitz constants of safety\nfunctions transformed with the distribution parameters using the maximum norm\nof the gradient in Gaussian process regression. Subsequently, the safe CMA-ES\nprojects the samples to the nearest point in the safe region constructed with\nthe estimated Lipschitz constants. The numerical simulation using the benchmark\nfunctions shows that the safe CMA-ES successfully performs optimization,\nsuppressing the unsafe evaluations, while the existing methods struggle to\nsignificantly reduce the unsafe evaluations.",
+        "subjects": [
+            "cs.NE"
+        ],
+        "authors": [
+            "Kento Uchida",
+            "Ryoki Hamano",
+            "Masahiro Nomura",
+            "Shota Saito",
+            "Shinichi Shirakawa"
+        ],
+        "published": "2024-05-17T04:24:56Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "Flattened one-bit stochastic gradient descent: compressed distributed\n  optimization with controlled variance",
+        "link": "http://arxiv.org/abs/2405.11095v1",
+        "abstract": "We propose a novel algorithm for distributed stochastic gradient descent\n(SGD) with compressed gradient communication in the parameter-server framework.\nOur gradient compression technique, named flattened one-bit stochastic gradient\ndescent (FO-SGD), relies on two simple algorithmic ideas: (i) a one-bit\nquantization procedure leveraging the technique of dithering, and (ii) a\nrandomized fast Walsh-Hadamard transform to flatten the stochastic gradient\nbefore quantization. As a result, the approximation of the true gradient in\nthis scheme is biased, but it prevents commonly encountered algorithmic\nproblems, such as exploding variance in the one-bit compression regime,\ndeterioration of performance in the case of sparse gradients, and restrictive\nassumptions on the distribution of the stochastic gradients. In fact, we show\nSGD-like convergence guarantees under mild conditions. The compression\ntechnique can be used in both directions of worker-server communication,\ntherefore admitting distributed optimization with full communication\ncompression.",
+        "subjects": [
+            "cs.LG",
+            "cs.NA",
+            "math.NA",
+            "math.OC"
+        ],
+        "authors": [
+            "Alexander Stollenwerk",
+            "Laurent Jacques"
+        ],
+        "published": "2024-05-17T21:17:27Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "MicroAdam: Accurate Adaptive Optimization with Low Space Overhead and\n  Provable Convergence",
+        "link": "http://arxiv.org/abs/2405.15593v1",
+        "abstract": "We propose a new variant of the Adam optimizer [Kingma and Ba, 2014] called\nMICROADAM that specifically minimizes memory overheads, while maintaining\ntheoretical convergence guarantees. We achieve this by compressing the gradient\ninformation before it is fed into the optimizer state, thereby reducing its\nmemory footprint significantly. We control the resulting compression error via\na novel instance of the classical error feedback mechanism from distributed\noptimization [Seide et al., 2014, Alistarh et al., 2018, Karimireddy et al.,\n2019] in which the error correction information is itself compressed to allow\nfor practical memory gains. We prove that the resulting approach maintains\ntheoretical convergence guarantees competitive to those of AMSGrad, while\nproviding good practical performance. Specifically, we show that MICROADAM can\nbe implemented efficiently on GPUs: on both million-scale (BERT) and\nbillion-scale (LLaMA) models, MicroAdam provides practical convergence\ncompetitive to that of the uncompressed Adam baseline, with lower memory usage\nand similar running time. Our code is available at\nhttps://github.com/IST-DASLab/MicroAdam.",
+        "subjects": [
+            "cs.LG",
+            "cs.NA",
+            "math.NA"
+        ],
+        "authors": [
+            "Ionut-Vlad Modoranu",
+            "Mher Safaryan",
+            "Grigory Malinovsky",
+            "Eldar Kurtic",
+            "Thomas Robert",
+            "Peter Richtarik",
+            "Dan Alistarh"
+        ],
+        "published": "2024-05-24T14:25:23Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "Counterfactual Explanations for Linear Optimization",
+        "link": "http://arxiv.org/abs/2405.15431v1",
+        "abstract": "The concept of counterfactual explanations (CE) has emerged as one of the\nimportant concepts to understand the inner workings of complex AI systems. In\nthis paper, we translate the idea of CEs to linear optimization and propose,\nmotivate, and analyze three different types of CEs: strong, weak, and relative.\nWhile deriving strong and weak CEs appears to be computationally intractable,\nwe show that calculating relative CEs can be done efficiently. By detecting and\nexploiting the hidden convex structure of the optimization problem that arises\nin the latter case, we show that obtaining relative CEs can be done in the same\nmagnitude of time as solving the original linear optimization problem. This is\nconfirmed by an extensive numerical experiment study on the NETLIB library.",
+        "subjects": [
+            "math.OC",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jannis Kurtz",
+            "Ş. İlker Birbil",
+            "Dick den Hertog"
+        ],
+        "published": "2024-05-24T10:58:00Z",
+        "label": "OPTIMIZATION"
+    },
+    {
+        "title": "Task-Based Design and Policy Co-Optimization for Tendon-driven\n  Underactuated Kinematic Chains",
+        "link": "http://arxiv.org/abs/2405.14566v1",
+        "abstract": "Underactuated manipulators reduce the number of bulky motors, thereby\nenabling compact and mechanically robust designs. However, fewer actuators than\njoints means that the manipulator can only access a specific manifold within\nthe joint space, which is particular to a given hardware configuration and can\nbe low-dimensional and/or discontinuous. Determining an appropriate set of\nhardware parameters for this class of mechanisms, therefore, is difficult -\neven for traditional task-based co-optimization methods. In this paper, our\ngoal is to implement a task-based design and policy co-optimization method for\nunderactuated, tendon-driven manipulators. We first formulate a general model\nfor an underactuated, tendon-driven transmission. We then use this model to\nco-optimize a three-link, two-actuator kinematic chain using reinforcement\nlearning. We demonstrate that our optimized tendon transmission and control\npolicy can be transferred reliably to physical hardware with real-world\nreaching experiments.",
+        "subjects": [
+            "cs.RO"
+        ],
+        "authors": [
+            "Sharfin Islam",
+            "Zhanpeng He",
+            "Matei Ciocarlie"
+        ],
+        "published": "2024-05-23T13:43:01Z",
+        "label": "OPTIMIZATION"
+    }
+]
